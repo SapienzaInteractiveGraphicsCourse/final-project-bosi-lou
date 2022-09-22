@@ -1,0 +1,2 @@
+Open in service web the http file to launch the project.  In running.js there is  moving action of character.
+In standby.js there is the breath movement when character stay quite. In main.js there are every code for loading models and conditions for entire project
