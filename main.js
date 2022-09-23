@@ -1066,7 +1066,7 @@ function animate() {
         console.log("z: "+torso.position.z)
     }*/
     
-    if(startTime<200 && loadComplete){
+    if(startTime<200){
         startTime +=1
         renderer.render( scene1 , camera1)
     }else if (win){
@@ -1099,10 +1099,12 @@ function animate() {
             camera.position.y =180     //50, 180
             torso.position.set(initialPosX, initialPosY, initialPosZ)
 
+        }else if(!loadComplete){
+            renderer.render( scene1 , camera1)
         }else{
             startTime +=1
         }
-    }else{
+    }else if (loadComplete){
         renderer.render( scene, camera )
     }
 	
