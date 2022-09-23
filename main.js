@@ -1153,7 +1153,7 @@ function managerSetUp(){
 
 function addRreflesh(){
     fontLoader.load('./codes/fonts/Font.json', function(font){
-        const geometry = new TextGeometry("Wainting and reflesh\n the page after 2 min",{
+        const geometry = new TextGeometry("Wainting and refresh\n the page after 2 min",{
             font: font,
             size: 20,
             height: 2.
