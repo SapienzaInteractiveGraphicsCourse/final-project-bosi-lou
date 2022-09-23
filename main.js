@@ -45,7 +45,6 @@ const plane = new THREE.Mesh( planeGeometry, planeMaterial );
 scene.add( plane );
 */
 
-loaderManager()
 const fontLoader = new FontLoader()
 var startTime = 0
 
