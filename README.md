@@ -27,4 +27,4 @@ This work is based on "Haru 🙎‍♀️Game Character"(https://sketchfab.com/3
 
 Issues
 ---------------
-Load twice for a problem when getting character.getObjectById(120) to load better the character assets. this problem is created by the model that not permit me to get the ribbon using the function character.getObjectByName.
+Load twice for a problem when getting character.getObjectById(121) to load better the character assets. this problem is created by the model that not permit me to get the ribbon using the function character.getObjectByName.
