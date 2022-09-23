@@ -63,7 +63,7 @@ fontLoader.load('./codes/fonts/Font.json', function(font){
     ])
     
     textMesh.position.x = 90
-    textMesh.position.y = 20
+    textMesh.position.y = -10
     textMesh.position.z = 0
     
     scene1.add(textMesh)
@@ -81,7 +81,7 @@ fontLoader.load('./codes/fonts/shift.json', function(font){
     ])
     
     arrows.position.x = 150
-    arrows.position.y = -100
+    arrows.position.y = -110
     arrows.position.z = 0
     
     scene1.add(arrows)
@@ -98,7 +98,7 @@ fontLoader.load('./codes/fonts/shift.json', function(font){
     ])
     
     arrows.position.x = 120
-    arrows.position.y = -130
+    arrows.position.y = -140
     arrows.position.z = 0
     
     scene1.add(arrows)
@@ -116,7 +116,7 @@ fontLoader.load('./codes/fonts/shift.json', function(font){
     ])
     
     arrows.position.x = 180
-    arrows.position.y = -130
+    arrows.position.y = -140
     arrows.position.z = 0
     
     scene1.add(arrows)
@@ -134,12 +134,11 @@ fontLoader.load('./codes/fonts/Font.json', function(font){
     ])
     
     textMesh.position.x = -100
-    textMesh.position.y = 0
+    textMesh.position.y = -30
     textMesh.position.z = 0
     
     scene1.add(textMesh)
 })
-
 fontLoader.load('./codes/fonts/Font.json', function(font){
     const geometry = new TextGeometry("moving the \n camera : \n drag mouse",{
         font: font,
@@ -152,14 +151,14 @@ fontLoader.load('./codes/fonts/Font.json', function(font){
     ])
     
     textMesh.position.x = -250
-    textMesh.position.y = 20
+    textMesh.position.y = 10
     textMesh.position.z = 0
     
     scene1.add(textMesh)
 })
 var textMesh
 fontLoader.load('./codes/fonts/Font.json', function(font){
-    const geometry = new TextGeometry("Start Game \n   Waiting  ",{
+    const geometry = new TextGeometry("Start Game ",{
         font: font,
         size: 20,
         height: 2.
@@ -175,6 +174,7 @@ fontLoader.load('./codes/fonts/Font.json', function(font){
     
     scene1.add(textMesh)
 })
+addRreflesh()
 var plus
 fontLoader.load('./codes/fonts/Font.json', function(font){
     const geometry = new TextGeometry("plus",{
@@ -531,7 +531,8 @@ loader.load( './assets/haru_game_character/scene.gltf', function ( gltf , Ammo =
     
     LUpperRibbon = character.getObjectById(120)  //L: 104, 114, 128, 154
     LUpperRibbon.scale.set(0.01, 0.01, 0.01)
-    /*LSecondRibbon = character.getObjectById(114)
+    /*
+    LSecondRibbon = character.getObjectById(114)
     LSecondRibbon.scale.set(0.01, 0.01, 0.01)
     LThirdRibbon = character.getObjectById(128)
     LThirdRibbon.scale.set(0.01, 0.01, 0.01)
@@ -542,14 +543,15 @@ loader.load( './assets/haru_game_character/scene.gltf', function ( gltf , Ammo =
     
     RUpperRibbon = character.getObjectById(123)  // R: 107, 118, 134, 159
     RUpperRibbon.scale.set(0.01, 0.01, 0.01)
-    /*RSecondRibbon = character.getObjectById(118)
+    /*
+    RSecondRibbon = character.getObjectById(118)
     RSecondRibbon.scale.set(0.01, 0.01, 0.01)
     RThirdRibbon = character.getObjectById(134)
     RThirdRibbon.scale.set(0.01, 0.01, 0.01)
     RLowerRibbon = character.getObjectById(159)
-    RLowerRibbon.scale.set(0.01, 0.01, 0.01)*/
+    RLowerRibbon.scale.set(0.01, 0.01, 0.01)
     
-
+*/
 
     umbrella = character.getObjectByName("Bip001-Prop1_51")
     //umbrella.rotateZ(-0.4)
@@ -1164,4 +1166,23 @@ function managerSetUp(){
     };
 }
 
+function addRreflesh(){
+    fontLoader.load('./codes/fonts/Font.json', function(font){
+        const geometry = new TextGeometry("Wainting and reflesh\n the page after 1 min",{
+            font: font,
+            size: 20,
+            height: 2.
+        })
+        const textMesh = new THREE.Mesh(geometry, [
+            new THREE.MeshPhongMaterial({color: 0xad4000}),
+            new THREE.MeshPhongMaterial({color:0x5c2301})
+        ])
+        
+        textMesh.position.x = -100
+        textMesh.position.y = 70
+        textMesh.position.z = 0
+        
+        scene1.add(textMesh)
+    })
+}
 
