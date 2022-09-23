@@ -31,21 +31,7 @@ scene2.background = new THREE.Color("#72c9da")
 
 const manager = new THREE.LoadingManager();
 managerSetUp()
-/*
-//green to cube
-const grassTexLoader = new THREE.TextureLoader().load("./textures/grass.jpg")
-const geometry = new THREE.BoxGeometry( 100, 0.1, 100 )
-const material = new THREE.MeshStandardMaterial( {color: 0x008f39 ,map:grassTexLoader})
-const cube = new THREE.Mesh( geometry, material )
-scene.add( cube )
 
-
-const planeGeometry = new THREE.PlaneGeometry( 5, 5,10,10 );
-const planeMaterial = new THREE.MeshPhongMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
-const plane = new THREE.Mesh( planeGeometry, planeMaterial );
-//plane.position.set(10,10,10)
-scene.add( plane );
-*/
 var loadComplete = false
 const fontLoader = new FontLoader()
 var startTime = 0
@@ -529,7 +515,7 @@ loader.load( './assets/haru_game_character/scene.gltf', function ( gltf , Ammo =
     
     
     
-    LUpperRibbon = character.getObjectById(120)  //L: 104, 114, 128, 154
+    LUpperRibbon = character.getObjectById(121)  //L: 104, 114, 128, 154
     LUpperRibbon.scale.set(0.01, 0.01, 0.01)
     /*
     LSecondRibbon = character.getObjectById(114)
@@ -541,7 +527,7 @@ loader.load( './assets/haru_game_character/scene.gltf', function ( gltf , Ammo =
    */
    
     
-    RUpperRibbon = character.getObjectById(123)  // R: 107, 118, 134, 159
+    RUpperRibbon = character.getObjectById(124)  // R: 107, 118, 134, 159
     RUpperRibbon.scale.set(0.01, 0.01, 0.01)
     /*
     RSecondRibbon = character.getObjectById(118)
@@ -1067,7 +1053,7 @@ function animate() {
         console.log("y: "+torso.position.y)
         console.log("z: "+torso.position.z)
     }*/
-    
+    /*
     if(startTime<200){
         startTime +=1
         renderer.render( scene1 , camera1)
@@ -1108,8 +1094,8 @@ function animate() {
         }
     }else if (loadComplete){
         renderer.render( scene, camera )
-    }
-	
+    }*/
+	renderer.render( scene, camera )
     requestAnimationFrame( animate )
     
 }
@@ -1168,7 +1154,7 @@ function managerSetUp(){
 
 function addRreflesh(){
     fontLoader.load('./codes/fonts/Font.json', function(font){
-        const geometry = new TextGeometry("Wainting and reflesh\n the page after 1 min",{
+        const geometry = new TextGeometry("Wainting and reflesh\n the page after 2 min",{
             font: font,
             size: 20,
             height: 2.
