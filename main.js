@@ -46,7 +46,7 @@ const plane = new THREE.Mesh( planeGeometry, planeMaterial );
 //plane.position.set(10,10,10)
 scene.add( plane );
 */
-
+var loadComplete = false
 const fontLoader = new FontLoader()
 var startTime = 0
 
@@ -1066,7 +1066,7 @@ function animate() {
         console.log("z: "+torso.position.z)
     }*/
     
-    if(startTime<200){
+    if(startTime<200 && loadComplete){
         startTime +=1
         renderer.render( scene1 , camera1)
     }else if (win){
@@ -1143,7 +1143,7 @@ function managerSetUp(){
     };
 
     manager.onLoad = function ( ) {
-
+        loadComplete = true
 	    console.log( 'Loading complete!');
 
     };
