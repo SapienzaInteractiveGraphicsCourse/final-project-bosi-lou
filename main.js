@@ -30,62 +30,7 @@ scene1.background = new THREE.Color("#72c9da")
 scene2.background = new THREE.Color("#72c9da")
 
 const manager = new THREE.LoadingManager();
-    manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-
-	    console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-
-    };
-
-    manager.onLoad = function ( ) {
-
-	    console.log( 'Loading complete!');
-
-    };
-
-
-    manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-
-	    console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
-
-    };
-
-    manager.onError = function ( url ) {
-
-	    console.log( 'There was an error loading ' + url );
-
-    };
-/*
-const manager = new THREE.LoadingManager()
-
-    manager.onLoad = function () {
-      console.log('Loading complete!');
-      loadFinished = true
-      var loadingBar = document.getElementById("loadingBar").style
-      loadingBar.visibility = "hidden"
-      var body = document.body.style
-      body.background = "whitesmoke"
-    };
-
-
-    manager.onProgress = function (url, itemsLoaded, itemsTotal) {
-      var progressBar = document.getElementById("progressBar")
-      progressBar.value = itemsLoaded / itemsTotal * 100
-      var loaded = document.getElementById("loaded")
-      loaded.textContent = itemsLoaded
-      var total = document.getElementById("total")
-      total.textContent = itemsTotal
-    };
-
-
-
-    manager.onError = function (url) {
-
-      console.log('There was an error loading ' + url + " Please Refresh!");
-      errorFlag = true
-    };
-*/
-  
-
+managerSetUp()
 /*
 //green to cube
 const grassTexLoader = new THREE.TextureLoader().load("./textures/grass.jpg")
@@ -1190,6 +1135,31 @@ const controls = new OrbitControls( camera, renderer.domElement )
 //const controls2 = new OrbitControls( camera2, renderer.domElement )
 //console.log(scene)
 
+function managerSetUp(){
+    manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
 
+	    console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+    };
+
+    manager.onLoad = function ( ) {
+
+	    console.log( 'Loading complete!');
+
+    };
+
+
+    manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+
+	    console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+    };
+
+    manager.onError = function ( url ) {
+
+	    console.log( 'There was an error loading ' + url );
+
+    };
+}
 
 
