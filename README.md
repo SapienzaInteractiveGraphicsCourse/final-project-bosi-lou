@@ -24,6 +24,9 @@ License
 ---------------
 This work is based on "Haru 🙎‍♀️Game Character"(https://sketchfab.com/3d-models/haru-game-character-439dcf75dba644d3b76c0dca3ead09c1) by Nyilonelycompany (https://sketchfab.com/Nyilonelycompany) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
 
+How to win 
+--------------
+The key is into at right side of character start position, then move straight on and turn right and go on to open that chest to get the key
 
 Issues
 ---------------
