@@ -8,6 +8,9 @@ Game
 ------------
 launch index.html in a live web server to start the game interactive graphics 
 
+Starting Game
+------------
+See in the console when load the models at 32/33 refresh the page and all models wiil loaded
 
 Browser Compatibility
 --------------
